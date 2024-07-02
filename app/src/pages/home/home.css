@@ -1,11 +1,9 @@
 /* Home.css */
 
 /* Container for the entire to-do list */
-body{
-    background-color: red;
-}
+
 .todo-container {
-    background-color: #ffffff; /* White background */
+    background-color: #ca8686; /* White background */
     border-radius: 8px;
     display: flex;
     flex-direction: column;
