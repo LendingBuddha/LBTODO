@@ -1,8 +1,13 @@
+// src/pages/login/Login.js
+import React from 'react'
+import styles from './Login.module.css' // Import the CSS module
 
-
-const Login = () => {
+function Login() {
   return (
-    <div>Login</div>
+    <div className={styles.login}>
+      <h1>Login Page</h1>
+      {/* Your content */}
+    </div>
   )
 }
 
