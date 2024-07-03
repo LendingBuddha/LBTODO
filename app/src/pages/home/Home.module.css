@@ -1,0 +1,8 @@
+/* src/pages/home/Home.module.css */
+.home {
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-color: lightblue;
+    /* Other styles */
+  }
+  

@@ -1,9 +1,13 @@
+// src/pages/home/Home.js
 import React from 'react'
-import './home.css'
+import styles from './Home.module.css'
 
-const Home = () => {
+function Home() {
   return (
-    <div>Home</div>
+    <div className={styles.home}>
+      <h1>Home Page</h1>
+      {/* Your content */}
+    </div>
   )
 }
 
