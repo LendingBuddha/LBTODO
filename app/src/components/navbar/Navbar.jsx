@@ -1,17 +1,23 @@
 // src/components/Navbar.js
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './navbar.css'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './navbar.css';
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
       <ul className="navbar-list">
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li className="dropdown">
-          <span className="dropdown-toggle">User</span>
+        <li className={`dropdown ${isOpen ? 'open' : ''}`} onClick={toggleDropdown}>
+          <Link to="/user" className="dropdown-toggle">User</Link>
           <ul className="dropdown-menu">
             <li>
               <Link to="/login">Login</Link>
@@ -23,7 +29,7 @@ function Navbar() {
         </li>
       </ul>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

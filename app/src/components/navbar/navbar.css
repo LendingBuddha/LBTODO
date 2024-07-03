@@ -15,17 +15,17 @@
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Move content to the right */
+    justify-content: flex-end;
   }
   
   .navbar-list li {
-    position: relative; /* Necessary for dropdown positioning */
+    position: relative;
     display: inline-block;
-    margin-right: 50px; /* Add some space between the list items */
+    margin-right: 20px;
   }
   
   .navbar-list li:last-child {
-    margin-right: 150px; /* Remove the margin from the last item */
+    margin-right: 150px;
   }
   
   .navbar-list a, .dropdown-toggle {
@@ -52,7 +52,7 @@
     padding: 0;
   }
   
-  .dropdown:hover .dropdown-menu {
+  .dropdown.open .dropdown-menu {
     display: block;
   }
   
