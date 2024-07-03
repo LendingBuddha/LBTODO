@@ -1,28 +1,14 @@
+// src/pages/signup/Signup.js
 import React from "react";
+import styles from "./Signup.module.css"; // Import the CSS module
 
-const Signup = ({ toggleSubmit }) => {
+function Signup() {
   return (
-    <>
-      <div className="login-inputs">
-        <input type="text" placeholder="Username" />
-        <i className="bx bxs-user"></i>
-      </div>
-      <div className="login-inputs">
-        <input type="email" placeholder="Email" />
-        <i className="bx bxs-envelope"></i>
-      </div>
-      <div className="login-inputs">
-        <input type="password" placeholder="Password" />
-        <i className="bx bxs-lock-alt"></i>
-      </div>
-      <button className="btn">Sign Up</button>
-      <div className="login-password">
-        <a href="#login" onClick={toggleSubmit}>
-          Already have an account?
-        </a>
-      </div>
-    </>
+    <div className={styles.signup}>
+      <h1>Signup Page</h1>
+      {/* Your content */}
+    </div>
   );
-};
+}
 
 export default Signup;

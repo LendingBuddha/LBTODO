@@ -1,0 +1,71 @@
+/* src/components/navbar.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar-list li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .navbar-list li:last-child {
+    margin-right: 120px;
+  }
+  
+  .navbar-list a, .dropdown-toggle {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+  }
+  
+  .navbar-list a:hover, .dropdown-toggle:hover {
+    background-color: #575757;
+    border-radius: 4px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    width: 100%;
+  }
+  
+  .dropdown-menu a {
+    padding: 0.5rem 1rem;
+  }
+  
+  body {
+    padding-top: 60px; /* Adjust this value if necessary to match the height of the navbar */
+  }
+  
