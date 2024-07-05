@@ -1,15 +1,49 @@
 /* src/components/navbar.css */
 .navbar {
+    display: flex;
     position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    position:sticky;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #0f172a;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
   }
   
+  .navbar .title{
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+
+  .active{
+    background-color: #7ac9e5;
+    border-radius: 4px;
+  }
+
+  .navbar .menu{
+    display: none;
+    position: absolute;
+    top:0.75rem;
+    right: 0.75rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+  }
+
+  .navbar .menu span{
+    height: 0.4rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.2rem;
+  }
   .navbar-list {
     list-style: none;
     margin: 0;
@@ -35,8 +69,8 @@
     display: block;
   }
   
-  .navbar-list a:hover, .dropdown-toggle:hover {
-    background-color: #575757;
+  .navbar-list a:not(.active):hover, .dropdown-toggle:hover {
+    background-color: #20a8da;
     border-radius: 4px;
   }
   
@@ -45,7 +79,7 @@
     position: absolute;
     top: calc(100% + 10px);
     left: 0;
-    background-color: #333;
+    background-color: #5b5959;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     list-style: none;
     margin: 0;
@@ -68,4 +102,3 @@
   body {
     padding-top: 60px; /* Adjust this value if necessary to match the height of the navbar */
   }
-  

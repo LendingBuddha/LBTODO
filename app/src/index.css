@@ -1,4 +1,6 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Example: src/index.css */
 body, html {
   margin: 0;

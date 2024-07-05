@@ -6,6 +6,8 @@ import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
 import User from './pages/user/User'
 import Navbar from './components/navbar/Navbar'
+import Footer from './components/footer/Footer'
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/user" element={<User />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   )
