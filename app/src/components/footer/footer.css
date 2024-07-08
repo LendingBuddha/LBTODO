@@ -4,13 +4,20 @@
 
 .footer{
     background-color: #045680;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
 }
 
 .sb__footer{
     display: flex;
     flex-direction: column;
 }
-
+.sb_footer-below-links{
+    margin-right: 80px;
+}
 .sb__footer-links{
     display: flex;
     justify-content: space-between;
@@ -58,6 +65,7 @@ a{
     font-size: 18px;
     line-height: 15px;
     font-weight: 600;
+    text-decoration: none;
 }
 hr{
     color: white !important;
@@ -65,7 +73,7 @@ hr{
 }
 
 .sb_footer-copyright p{
-    font-size: 18px;
+    font-size: 20px;
     line-height: 15px;
     color: rgb(255, 255, 255);
     font-weight: 600;

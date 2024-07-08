@@ -18,7 +18,7 @@ function Navbar() {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="">Create a note</NavLink>
+          <NavLink to="/note">Create a note</NavLink>
         </li>
         <li className="dropdown">
           <NavLink to="/user" className="dropdown-toggle">User</NavLink>
