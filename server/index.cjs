@@ -1,82 +1,64 @@
-// Import the http module
 const http = require('http');
 const url = require('url');
+const cors = require('cors');
+const express = require('express');
 
-// Define the hostname and port
+// Create an express app
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
 const hostname = '127.0.0.1';
 const port = 3000;
 
 const users = [{ username: "akshat", password: "password123" }];
 const notes = [];
 
+// Define routes
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
 
-const server = http.createServer((req, res) => {
-  const parsedUrl = url.parse(req.url, true);
-  const method = req.method.toUpperCase();
-  
-  res.setHeader('Content-Type', 'application/json');
-  
-  // Define routes
-  if (parsedUrl.pathname === '/login' && method === 'POST') {
-    let body = '';
-    req.on('data', chunk => {
-      body += chunk.toString();
-    });
-    req.on('end', () => {
-      const data = JSON.parse(body);
-      
-      const { username, password } = data;
-      const user = users.find(u => u.username === username && u.password === password);
-      if (user) {
-        res.statusCode = 200;
-        res.end(JSON.stringify({ message: 'Login successful', user: username }));
-      } else {
-        res.statusCode = 401;
-        res.end(JSON.stringify({ message: 'Invalid credentials' }));
-      }
-    });
-  } else if (parsedUrl.pathname === '/signup' && method === 'POST') {
-    let body = '';
-    req.on('data', chunk => {
-      body += chunk.toString();
-    });
-    req.on('end', () => {
-      const data = JSON.parse(body);
-      const { username, password } = data;
-      if (users.find(u => u.username === username)) {
-        res.statusCode = 409; 
-        res.end(JSON.stringify({ message: 'User already exists' }));
-      } else {
-        users.push({ username, password });
-        res.statusCode = 201; 
-        res.end(JSON.stringify({ message: 'Signup successful', user: username }));
-      }
-    });
-  } else if (parsedUrl.pathname === '/home' && method === 'GET') {
-    res.statusCode = 200;
-    res.end(JSON.stringify({ message: 'Welcome to the Home route' }));
-  } else if (parsedUrl.pathname === '/notes' && method === 'GET') {
-    res.statusCode = 200;
-    res.end(JSON.stringify({ message: 'Get notes route', notes }));
-  } else if (parsedUrl.pathname === '/notes' && method === 'POST') {
-    let body = '';
-    req.on('data', chunk => {
-      body += chunk.toString();
-    });
-    req.on('end', () => {
-      const data = JSON.parse(body);
-      notes.push(data);
-      res.statusCode = 201;
-      res.end(JSON.stringify({ message: 'Note created', note: data }));
-    });
-  } else if (parsedUrl.pathname === '/users' && method === 'GET') {
-    res.statusCode = 200;
-    res.end(JSON.stringify({ message: 'Get users route', users }));
+  const user = users.find(u => u.username === username && u.password === password);
+  if (user) {
+    res.status(200).json({ message: 'Login successful' });
   } else {
-    res.statusCode = 404;
-    res.end(JSON.stringify({ message: 'Route not found' }));
+    res.status(401).json({ message: 'Unauthorized' });
   }
 });
+
+app.post('/signup', (req, res) => {
+  const { username, password } = req.body;
+  if (users.find(u => u.username === username)) {
+    res.status(409).json({ message: 'User already exists' });
+  } else {
+    users.push({ username, password });
+    res.status(201).json({ message: 'Signup successful', user: username });
+  }
+});
+
+app.get('/home', (req, res) => {
+  res.status(200).json({ message: 'Welcome to the Home route' });
+});
+
+app.get('/notes', (req, res) => {
+  res.status(200).json({ message: 'Get notes route', notes });
+});
+
+app.post('/notes', (req, res) => {
+  notes.push(req.body);
+  res.status(201).json({ message: 'Note created', note: req.body });
+});
+
+app.get('/users', (req, res) => {
+  res.status(200).json({ message: 'Get users route', users });
+});
+
+app.use((req, res) => {
+  res.status(404).json({ message: 'Route not found' });
+});
+
+const server = http.createServer(app);
 
 // Make the server listen on the specified hostname and port
 server.listen(port, hostname, () => {
