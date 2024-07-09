@@ -5,12 +5,12 @@ const cors = require('cors');
 
 require('dotenv').config();
 const PORT = 8000;
-require('./db.cjs')
+require('./DBCONFIG/db.js')
 
 app.use(bodyParser.json());
 app.use(cors());
 
-const authRoutes = require('./routes/auth.cjs'); 
+const authRoutes = require('./routes/Auth/auth.js'); 
 app.use('/api', authRoutes);
 
 app.get('/', (req, res)=>{
