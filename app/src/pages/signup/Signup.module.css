@@ -1,8 +1,18 @@
 /* src/pages/signup/Signup.module.css */
 .signup {
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    background-color: lightcoral;
-    /* Other styles */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(181, 34, 103, 1) 2%,
+    rgba(137, 35, 134, 1) 40%,
+    rgba(72, 46, 145, 1) 98% 
+  );
+  text-align: center;
+  color: black;
   }
   

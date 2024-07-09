@@ -15,15 +15,17 @@ const Home = () => {
     }
   };
 
+ 
+
   const deleteTask = (index) => {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
   };
+  
 
   return (
     <>
     <div className="home">
-      <h1>Home Page</h1>
       <div className="todo-container">
         <h2>To Do List</h2>
         <div className="input-container">
