@@ -23,7 +23,6 @@
 }
 
 .box {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -60,7 +59,7 @@
 }
 
 .inputs input {
-  width: 80%;
+  width: 100%;
   background: transparent;
   border: none;
   outline: none;

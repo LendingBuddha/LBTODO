@@ -2,9 +2,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
-import React from "react";
-import { Link } from "react-router-dom";
-import "./navbar.css";
 import logo from "../../assets/logo.png";
 
 function Navbar() {
@@ -30,9 +27,6 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li className="dropdown">
-          <Link to="/user" className="dropdown-toggle">
-            User
-          </Link>
           <Link
             to="/user"
             className="dropdown-toggle"
