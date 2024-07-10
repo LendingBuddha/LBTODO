@@ -24,8 +24,8 @@
     "nodemon": "^3.1.4"
   },
   "scripts": {
-    "start": "node index.cjs",
-    "dev": "nodemon index.cjs"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "eslintConfig": {
     "extends": [
