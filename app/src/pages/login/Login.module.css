@@ -10,8 +10,184 @@
     90deg,
     rgba(181, 34, 103, 1) 2%,
     rgba(137, 35, 134, 1) 40%,
-    rgba(72, 46, 145, 1) 98% 
+    rgba(72, 46, 145, 1) 98%
   );
   text-align: center;
   color: black;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #b92265, #8d278f, #353192);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+}
+
+.header p {
+  margin-bottom: 0;
+}
+
+.body {
+  padding: 2rem;
+}
+
+.inputs {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.inputs input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(151, 49, 49, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #000;
+  padding: 20px 45px 20px 20px;
+}
+.inputs i {
+  position: absolute;
+  right: 20px;
+  top: 40%;
+  transform: translate(-70%);
+  font-size: 20px;
+}
+.checkpassword {
+  position: absolute;
+  right: 20px;
+  top: 65%;
+  transform: translate(-10%);
+  font-size: 20px;
+}
+.inputs input::placeholder {
+  color: #777;
+}
+.btnlogin {
+  width: 100%;
+  height: 45px;
+  background: linear-gradient(135deg, #b92265, #8d278f, #353192);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.password {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.password a {
+  color: #6a6aff;
+  text-decoration: none;
+}
+
+.remember {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.remember span {
+  cursor: pointer;
+  color: #777;
+}
+.googleSignInButton {
+  background-color: white;
+  border: 2px solid #dcdcdc;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+.googleContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.googleLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 2.25rem; /* equivalent to 36px */
+  height: 2.25rem; /* equivalent to 36px */
+  border-radius: 50%;
+}
+
+.googleLogo {
+  width: 1.25rem; /* equivalent to 20px */
+  height: 1.25rem; /* equivalent to 20px */
+}
+
+.googleLogoBlue {
+  fill: #4285f4;
+}
+
+.googleLogoGreen {
+  fill: #34a853;
+}
+
+.googleLogoYellow {
+  fill: #fbbc05;
+}
+
+.googleLogoRed {
+  fill: #ea4335;
+}
+
+.googleSignInText {
+  font-size: 0.875rem;
+  color: #5f6368;
+  display: flex;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 80%;
+  }
+
+  .header,
+  .body {
+    padding: 1.5rem;
+  }
+
+  .inputs input {
+    padding: 15px 40px 15px 15px;
+  }
+
+  .btn {
+    height: 40px;
+    font-size: 14px;
+  }
 }
