@@ -10,13 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.21",
-    "@mui/material": "^5.15.21",
-    "axios": "^1.7.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "firebase": "^10.12.3",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-phone-number-input": "^3.4.3",
@@ -32,5 +29,10 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "vite": "^5.3.1"
-  }
+  },
+  "description": "this is the frontend",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

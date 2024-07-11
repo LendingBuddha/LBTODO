@@ -1,8 +1,80 @@
 /* src/pages/home/Home.module.css */
 .home {
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    background-color: lightblue;
-    text-align: center;
-    color: black;
-  }
+   height: 100vh; /* Full viewport height */
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   background: #91eae4;
+   background: linear-gradient(120deg, #65c8f6 0%, #c985fd 100%);
+}
+
+.home h1{
+   color: black; /* Blue heading color */
+   padding: 20px;
+   font-size: 3rem;
+ }
+
+.home button{
+   /*color: black;  Blue heading color 
+   padding: 15px;
+   font-size: 2rem; */
+   padding: 15px;
+   border: none;
+   background-color: white;
+   color:  #d88771;;
+   cursor: pointer;
+   transition: all 0.3s ease;
+ }
+
+ .home button:hover {
+   background: #d88771;
+   color: white;
+ }
+
+.home input{
+   /*color: black;  Blue heading color 
+   padding: 15px;
+   font-size: 2rem;*/
+   width: 300px;
+   padding: 15px;
+   border: none;
+   outline: none;
+ }
+
+.task {
+   display: flex;
+   align-items: center;
+   width: 345px;
+   justify-content: space-between;
+   background-color: rgb(255, 255, 255);
+   color: black;
+   padding: 2px 5px 2px 5px;
+   margin-top: 20px;
+   font-size: 1rem;
+}
+
+
+.checkbox {
+   display: flex;
+   align-items: center;
+}
+
+.line_through {
+   text-decoration: line-through;
+}
+
+.checkbox .icon {
+   margin-right: 5px;
+   font-size: 15px;
+}
+
+.task div span {
+   margin: 0px 5px 0 4px
+}
+
+.task div .icon {
+   cursor: pointer;
+}

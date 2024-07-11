@@ -5,9 +5,9 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
 import User from "./pages/user/User";
+import Note from "./pages/note/Note";
 import Navbar from "./components/navbar/Navbar";
-import Note from "./components/note/Note";
-import Footer from "./components/footer/Footer";
+import ProtectedRoute from "./pages/protectedRoute/protectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Edit from "./pages/user/Edit";
@@ -22,9 +22,23 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/note" element={<Note />} />
           <Route path="/login" element={<Login />} />
-          <Route path='/edit' element={<Edit />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/user" element={<User />} />
+          <Route path="/signup" element={<Signup />} />{" "}
+          <Route
+            path="/note"
+            element={
+              <ProtectedRoute>
+                <Note />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/user"
+            element={
+              <ProtectedRoute>
+                <User />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
         <Footer />
       </div>

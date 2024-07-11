@@ -2,7 +2,7 @@
   "name": "server",
   "version": "0.1.0",
   "private": true,
-  "main": "index.cjs",
+  "main": "index.js",
   "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

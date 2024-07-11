@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 /* Example: src/index.css */
-body, html {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }

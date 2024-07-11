@@ -19,32 +19,6 @@ function Login() {
   const [visible, setVisible] = useState(false);
   const navigate = useNavigate();
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await signInWithEmailAndPassword(auth, email, password);
-  //     window.location.href = "/";
-  //     toast.success("User logged Successfully!!", {
-  //       position: "top-center",
-  //     });
-  //   } catch (error) {
-  //     if (error.code === "auth/invalid-credential") {
-  //       toast.error("No user found with this email and password.", {
-  //         position: "bottom-center",
-  //       });
-  //     } else if (error.code === "auth/wrong-password") {
-  //       toast.error("Incorrect password. Please try again.", {
-  //         position: "bottom-center",
-  //       });
-  //     } else {
-  //       toast.error(error.message, {
-  //         position: "bottom-center",
-  //       });
-  //     }
-  //     console.log(error.message);
-  //   }
-  // };
-
   axios.defaults.withCredentials = true;
 
   const handleSubmit = (e) => {

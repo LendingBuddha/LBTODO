@@ -2,14 +2,18 @@
 .login {
   height: 100vh; /* Full viewport height */
   width: 100vw; /* Full viewport width */
-  background: rgb(181, 34, 103);
-  background: rgb(181, 34, 103);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   background: linear-gradient(
     90deg,
     rgba(181, 34, 103, 1) 2%,
     rgba(137, 35, 134, 1) 40%,
     rgba(72, 46, 145, 1) 98%
   );
+  text-align: center;
+  color: black;
 }
 .container {
   display: flex;
@@ -19,7 +23,6 @@
 }
 
 .box {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -56,7 +59,7 @@
 }
 
 .inputs input {
-  width: 80%;
+  width: 100%;
   background: transparent;
   border: none;
   outline: none;

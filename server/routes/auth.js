@@ -37,4 +37,25 @@ router.post("/login", async (req, res) => {
   return res.json({ status: true, message: "login sucessfully" });
 });
 
+// Protected route
+const verifyUser = async (req, res, next) => {
+  try {
+    const token = req.cookies.token;
+    if (!token) {
+      return res
+        .status(401)
+        .json({ message: "Unauthorized: No token provided" });
+    }
+    const decoded = jwt.verify(token, process.env.KEY);
+    req.user = decoded;
+    next();
+  } catch (err) {
+    return res.status(403).json({ message: "Unauthorized: Invalid token" });
+  }
+};
+
+router.get("/verify", verifyUser, async (req, res) => {
+  return res.json({ status: true, message: "Authorized" });
+});
+
 export { router as UserRouter };
