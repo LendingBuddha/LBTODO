@@ -6,8 +6,11 @@ import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
 import User from "./pages/user/User";
 import Navbar from "./components/navbar/Navbar";
+import Note from "./components/note/Note";
+import Footer from "./components/footer/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Edit from "./pages/user/Edit";
 
 function App() {
   return (
@@ -19,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/note" element={<Note />} />
           <Route path="/login" element={<Login />} />
+          <Route path='/edit' element={<Edit />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/user" element={<User />} />
         </Routes>

@@ -1,0 +1,51 @@
+/* src/pages/user/User.module.css */
+.user {
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-color: rgb(255, 255, 255);
+}
+.scrollable-container{
+  height: auto !important;
+  overflow-y: auto !important;
+}
+/*main*/
+.profile-head{
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 40px;
+}
+.profile-body{
+  margin: 0 auto;
+  width: 70%;
+  color: #6a6969;
+}
+.details {
+  margin: 0 auto;
+  width: 70%;
+}
+.emailid{
+  margin: 0 auto;
+  width: 70%;
+  color: #6a6969;
+  font-size: 20px;
+}
+.fullname{
+  margin: 0 auto;
+  width: 70%;
+  color: #6a6969;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.phoneno{
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 2px;
+  color: #6a6969;
+  font-size: 20px; 
+}
+.button{
+  margin: 0 auto;
+  margin-left: 30%;
+  margin-top: 15px;
+  border-color: grey;
+}
