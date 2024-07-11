@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../assets/logo.png";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   function handleDropdownClick() {

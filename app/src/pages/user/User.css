@@ -2,7 +2,17 @@
 .user {
   height: 100vh; /* Full viewport height */
   width: 100vw; /* Full viewport width */
-  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(181, 34, 103, 1) 2%,
+    rgba(137, 35, 134, 1) 40%,
+    rgba(72, 46, 145, 1) 98% 
+  );
+  text-align: center;
+  color: black;
 }
 .scrollable-container{
   height: auto !important;
@@ -12,40 +22,27 @@
 .profile-head{
   margin: 0 auto;
   width: 70%;
-  margin-top: 40px;
+  margin-top: 60px;
+  font-size: 25px;
 }
 .profile-body{
   margin: 0 auto;
   width: 70%;
   color: #6a6969;
-}
-.details {
-  margin: 0 auto;
-  width: 70%;
-}
-.emailid{
-  margin: 0 auto;
-  width: 70%;
-  color: #6a6969;
+  margin-top: 20px;
+  margin-left: 280px;
   font-size: 20px;
 }
-.fullname{
+.edit-button{
   margin: 0 auto;
-  width: 70%;
-  color: #6a6969;
-  margin-top: 30px;
-  font-size: 20px;
-}
-.phoneno{
-  margin: 0 auto;
-  width: 70%;
-  margin-top: 2px;
-  color: #6a6969;
-  font-size: 20px; 
-}
-.button{
-  margin: 0 auto;
-  margin-left: 30%;
+  margin-left: 18%;
   margin-top: 15px;
   border-color: grey;
+  font-size: 20px;
+  padding: 10px 10px;
+}
+.edit-button:hover{
+  cursor: pointer;
+  background-color: aliceblue;
+  
 }

@@ -11,6 +11,7 @@ import ProtectedRoute from "./pages/protectedRoute/protectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Edit from "./pages/user/Edit";
+import Footer from './components/footer/Footer'
 
 function App() {
   return (
@@ -23,22 +24,9 @@ function App() {
           <Route path="/note" element={<Note />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />{" "}
-          <Route
-            path="/note"
-            element={
-              <ProtectedRoute>
-                <Note />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/user"
-            element={
-              <ProtectedRoute>
-                <User />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/note" element={<ProtectedRoute><Note /></ProtectedRoute>}/>
+          <Route path="/user" element={<ProtectedRoute><User /></ProtectedRoute>}/>
+          <Route path="/edit" element={<ProtectedRoute><Edit /></ProtectedRoute>}/>
         </Routes>
         <Footer />
       </div>
