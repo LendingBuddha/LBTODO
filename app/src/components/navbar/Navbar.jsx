@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../assets/logo.png";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   function handleDropdownClick() {
@@ -24,7 +25,10 @@ function Navbar() {
       </div>
       <ul className="navbar-list">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/note">Create a note</NavLink>
         </li>
         <li className="dropdown">
           <Link

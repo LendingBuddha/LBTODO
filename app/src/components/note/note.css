@@ -1,0 +1,64 @@
+body{
+    background-color: #ffffff;
+    color:#000000
+  }
+  .Todo{
+    text-align: center;
+  }
+  .taskBg{
+    background-color: #7ac9e5;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 10px 140px 10px 15px;
+    text-align: left;
+    font-size: 22px;
+    position: relative;
+  }
+  .taskBg div{
+    display: flex;
+    align-items: center;
+  }
+  .taskNumber{
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+  }
+  .taskBg .taskText{
+    flex:1;
+  }
+  .taskBg .done .taskText{
+    text-decoration: line-through;
+    opacity: 0.3;
+  }
+  .taskBg .iconsWrap{
+    position: absolute;
+    top: 50px;
+    transform: translateY(-120%);
+    right: 15px;
+    width: auto;
+    display: inline-block;
+  }
+  .taskBg .iconsWrap span{
+    display: inline-block;
+    margin: 0px 10px 0 0px;
+    cursor: pointer;
+  }
+  .taskBg .iconsWrap span .check:hover{
+    color: #0dcc4d;
+  }
+  .taskBg .iconsWrap span .edit:hover{
+    color: #b828ac;
+  }
+  .taskBg .iconsWrap span .delete:hover{
+    color: #d1513b;
+  }
+  .mr-20{
+    margin-right: 20px;
+  }
